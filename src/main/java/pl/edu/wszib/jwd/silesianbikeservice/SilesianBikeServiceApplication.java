@@ -12,5 +12,5 @@ public class SilesianBikeServiceApplication {
         SpringApplication.run(SilesianBikeServiceApplication.class, args);
 
     }
-
+DbInit dbInit = new DbInit();
 }
