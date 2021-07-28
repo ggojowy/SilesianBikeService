@@ -8,19 +8,12 @@ public class Serwisant {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String imie;
+    private String nazwisko;
     private String login;
-    private String password;
+    private String haslo;
 
     public Serwisant() {
-    }
-
-    public Serwisant(String firstName, String lastName, String login, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.login = login;
-        this.password = password;
     }
 
     public Long getId() {
@@ -31,20 +24,20 @@ public class Serwisant {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getImie() {
+        return imie;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setImie(String imie) {
+        this.imie = imie;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNazwisko() {
+        return nazwisko;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
     }
 
     public String getLogin() {
@@ -55,11 +48,11 @@ public class Serwisant {
         this.login = login;
     }
 
-    public String getPassword() {
-        return password;
+    public String getHaslo() {
+        return haslo;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setHaslo(String haslo) {
+        this.haslo = haslo;
     }
 }
