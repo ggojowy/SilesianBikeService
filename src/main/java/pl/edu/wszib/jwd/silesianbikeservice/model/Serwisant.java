@@ -10,17 +10,15 @@ public class Serwisant {
     private Long id;
     private String firstName;
     private String lastName;
-    private int age;
     private String login;
     private String password;
 
     public Serwisant() {
     }
 
-    public Serwisant(String firstName, String lastName, int age, String login, String password) {
+    public Serwisant(String firstName, String lastName, String login, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.login = login;
         this.password = password;
     }
@@ -47,14 +45,6 @@ public class Serwisant {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getLogin() {
