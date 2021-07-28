@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import pl.edu.wszib.jwd.silesianbikeservice.model.Serwisant;
 
 @Repository
-public interface SerwisantDao extends CrudRepository<Serwisant, Long>{
+public interface SerwisantDao extends CrudRepository<Serwisant, Long> {
     Serwisant findFirstByLogin(String serwisantName);
 }
