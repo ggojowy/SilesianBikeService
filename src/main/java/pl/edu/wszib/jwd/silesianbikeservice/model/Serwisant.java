@@ -6,14 +6,29 @@ import javax.persistence.*;
 @Table(name = "serwisanci")
 public class Serwisant {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, length = 30)
     private String imie;
+
+    @Column(nullable = false, length = 30)
     private String nazwisko;
+
+    @Column(nullable = false, unique = true, length = 100)
     private String login;
+
+    @Column(nullable = false, length = 100)
     private String haslo;
 
     public Serwisant() {
+    }
+
+    public Serwisant(String imie, String nazwisko, String login, String haslo) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.login = login;
+        this.haslo = haslo;
     }
 
     public Long getId() {
