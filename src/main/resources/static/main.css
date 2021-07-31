@@ -10,7 +10,7 @@ html, body {
     display: flex;
 }
 
-.sub-contener {
+.sub-container {
     width: 50%;
     height: 100%;
     display: flex;
@@ -21,17 +21,17 @@ html, body {
 
 .button {
     cursor: pointer;
-    background-color: red;
+    background-color: blue;
     border: none;
     width: 80%;
     height: 10%;
     border-radius: 50px;
     margin: 15px;
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
     vertical-align: center;
 }
 
-.button:hover {
-    background-color: blue;
+.main-btn-div {
+    width: 50%;
 }

@@ -10,12 +10,13 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container text-center d-flex p-2">
     <div class="sub-contener">
-        <img src="ikona.png" alt="QUIZER" width="600" height="600">
+        <img src="ikona.png" width="600" height="600">
     </div>
     <div class="sub-contener">
-        <a class="button" th:href="@{/newSerwisant}"><button class="button">Zarejestruj nowego serwisanta</button></a>
+        <a th:href="@{/register}" class="btn btn-outline-primary btn-lg btn-block">Zarejestruj się</a>
+        <a th:href="@{/login}" class="btn btn-primary mt-2">Zaloguj się</a>
     </div>
 </div>
 
