@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.edu.wszib.jwd.silesianbikeservice.dao.SerwisantDao;
 import pl.edu.wszib.jwd.silesianbikeservice.model.Serwisant;
+import pl.edu.wszib.jwd.silesianbikeservice.model.Zgloszenie;
 
 @Controller
 public class MainController {
@@ -27,6 +28,7 @@ public class MainController {
         model.addAttribute("serwisant", new Serwisant());
         return "rejestracja";
     }
+
     @PostMapping("/process_register")
     public String processRegistration(Serwisant serwisant) {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -41,6 +43,8 @@ public class MainController {
             return "nieudana_rejestracja";
         }
     }
+
+
     @GetMapping("/")
     public String get(Model model) {
         if (currSerwisantLogin != null) {
@@ -48,4 +52,22 @@ public class MainController {
         }
         return "main";
     }
+    @GetMapping("/strona_uzytkownika")
+    public String wyswietlStroneUzytkownika(Model model) {
+        return "strona_uzytkownika";
+    }
+
+    @GetMapping("/panel_serwisowy")
+    public String showFrom(Model model) {
+        model.addAttribute("zgloszenie", new Zgloszenie());
+        return "nowe_zgloszenie";
+    }
+
+    @GetMapping("/nowe_zgloszenie")
+    public String showFrom2(Model model) {
+        model.addAttribute("zgloszenie", new Zgloszenie());
+        return "nowe_zgloszenie";
+    }
+
 }
+

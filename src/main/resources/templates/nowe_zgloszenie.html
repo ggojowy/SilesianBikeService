@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nowe zgłoszenie</title>
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container text-center">
+    <div>
+        <h1>Dodaj nowe zgloszenie</h1>
+    </div>
+    <form th:action="@{/dodaj_zgloszenie}" th:object="${zgloszenie}" method="post"
+          style="max-width: 600px; margin: 0 auto;">
+        <div class="m-3">
+
+            <div class="form-group row">
+                <label class="col-form-label col-4">Imię klienta</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{imieKlienta}" required
+                           minlength="2" maxlength="25">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-4">Nazwisko klienta</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{nazwiskoKlienta}" required
+                           minlength="2" maxlength="25">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-4">Treść Zgłoszenia</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{trescZgloszenia}" required
+                           minlength="2" maxlength="10000">
+                </div>
+            </div>
+
+
+            <div>
+                <button type="submit" class="btn btn-primary">Dodaj Zgłoszenie</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

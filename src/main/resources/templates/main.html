@@ -7,16 +7,19 @@
     <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title>
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
-<div class="container text-center d-flex p-2">
-    <div class="sub-contener">
+<div class="container">
+
+    <div class="sub-container">
+        <h1>Silesian Bike Service</h1>
         <img src="ikona.png" width="600" height="600">
     </div>
-    <div class="sub-contener">
-        <a th:href="@{/register}" class="btn btn-outline-primary btn-lg btn-block">Zarejestruj się</a>
-        <a th:href="@{/login}" class="btn btn-primary mt-2">Zaloguj się</a>
+    <div class="sub-container1">
+        <h1><a th:href="@{/register}"  class="btn btn-outline-primary btn-lg mt-5">Zarejestruj się</a></h1>
+        <h2><a th:href="@{/login}"  class="btn btn-outline-primary btn-lg mt-5">Zaloguj się</a></h2>
     </div>
 </div>
 

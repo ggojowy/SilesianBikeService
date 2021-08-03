@@ -8,29 +8,28 @@ html, body {
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub-container {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.button {
-    cursor: pointer;
-    background-color: blue;
-    border: none;
-    width: 80%;
-    height: 10%;
-    border-radius: 50px;
-    margin: 15px;
-    font-size: 40px;
-    text-align: center;
-    vertical-align: center;
+.sub-container1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .main-btn-div {
     width: 50%;

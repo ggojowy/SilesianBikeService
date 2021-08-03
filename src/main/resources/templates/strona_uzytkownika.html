@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Strona użytkownika</title>
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container text-center align-items-center d-flex justify-content-center">
+    <div>
+        <div class="sub-contener">
+            <h1>Silesian Bike Service</h1>
+            <img src="ikona.png" width="500" height="500">
+        </div>
+        <div class="d-flex flex-column p-5">
+            <a th:href="@{/nowe_zgloszenie}" class="btn btn-outline-primary btn-lg mt-5">Nowe zgłoszenie</a>
+            <a th:href="@{/wszystkie_zgloszenia}" class="btn btn-outline-primary btn-lg mt-3">Zobacz wszystkie zgłoszenia</a>
+        </div>
+        <div>
+            <form th:action="@{/logout}" method="post">
+
+                <input class="mt-2" type="submit" value="Sign out">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
