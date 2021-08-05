@@ -28,6 +28,7 @@ public class Zgloszenie {
         dataZgloszenia = new Date();
     }
 
+
     public Zgloszenie() {
     }
 
