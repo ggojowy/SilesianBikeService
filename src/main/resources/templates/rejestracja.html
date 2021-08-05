@@ -10,27 +10,20 @@
 <body>
 <div class="container text-center">
     <div>
-        <h1>Rejestracja serwisanta</h1>
+        <h1>Bicycle service technician register</h1>
     </div>
     <form th:action="@{/process_register}" th:object="${serwisant}" method="post"
           style="max-width: 600px; margin: 0 auto;">
         <div class="m-3">
             <div class="form-group row">
-                <label class="col-form-label col-4">Hasło</label>
-                <div class="col-8">
-                    <input type="password" class="form-control" th:field="*{haslo}" required
-                           minlength="6" maxlength="10">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-form-label col-4">Imię</label>
+                <label class="col-form-label col-4">Name</label>
                 <div class="col-8">
                     <input type="text" class="form-control" th:field="*{imie}" required
                            minlength="2" maxlength="20">
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-form-label col-4">Nazwisko</label>
+                <label class="col-form-label col-4">Surname</label>
                 <div class="col-8">
                     <input type="text" class="form-control" th:field="*{nazwisko}" required
                            minlength="2" maxlength="20">
@@ -43,8 +36,15 @@
                            minlength="2" maxlength="20">
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="col-form-label col-4">Password</label>
+                <div class="col-8">
+                    <input type="password" class="form-control" th:field="*{haslo}" required
+                           minlength="6" maxlength="10">
+                </div>
+            </div>
             <div>
-                <button type="submit" class="btn btn-primary">Zarejestruj się</button>
+                <button type="submit" class="btn btn-primary">Sign up</button>
             </div>
         </div>
     </form>

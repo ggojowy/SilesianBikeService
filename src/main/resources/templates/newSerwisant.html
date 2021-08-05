@@ -6,10 +6,10 @@
 </head>
 <body>
 <form th:action="@{/add-serwisant}" th:object="${newSerwisant}" method="post">
-    <p>Imię: <input type="text" th:field="*{imie}" required minlength="3" maxlength="15"></p>
-    <p>Nazwisko: <input type="text" th:field="*{nazwisko}"required minlength="2" maxlength="30"></p>
+    <p>Name: <input type="text" th:field="*{imie}" required minlength="3" maxlength="15"></p>
+    <p>Surname: <input type="text" th:field="*{nazwisko}"required minlength="2" maxlength="30"></p>
     <p>Login: <input type="text" th:field="*{login}"required minlength="4" maxlength="12"></p>
-    <p>Hasło: <input type="text" th:field="*{haslo}"required minlength="8" maxlength="10"></p>
+    <p>Password: <input type="text" th:field="*{haslo}"required minlength="8" maxlength="10"></p>
     <p><input type="submit" value="Zarejestruj"></p>
 </form>
 </body>

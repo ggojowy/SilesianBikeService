@@ -12,28 +12,28 @@
 
 <div class="container text-center">
     <div>
-        <h1>Dodaj nowe zgłoszenie</h1>
+        <h1>Add new service request</h1>
     </div>
     <form th:action="@{/dodaj_zgloszenie}" th:object="${zgloszenie}" method="post"
           style="max-width: 600px; margin: 0 auto;">
         <div class="m-3">
 
             <div class="form-group row">
-                <label class="col-form-label col-4">Imię klienta</label>
+                <label class="col-form-label col-4">Customer name</label>
                 <div class="col-8">
                     <input type="text" class="form-control" th:field="*{imieKlienta}" required
                            minlength="2" maxlength="25">
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-form-label col-4">Nazwisko klienta</label>
+                <label class="col-form-label col-4">Customer surname</label>
                 <div class="col-8">
                     <input type="text" class="form-control" th:field="*{nazwiskoKlienta}" required
                            minlength="2" maxlength="25">
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-form-label col-4">Treść zgłoszenia</label>
+                <label class="col-form-label col-4">Service description</label>
                 <div class="col-8">
                     <input type="text" class="form-control" th:field="*{trescZgloszenia}" required
                            minlength="2" maxlength="10000">
@@ -42,7 +42,7 @@
 
 
             <div>
-                <button type="submit" class="btn btn-primary">Dodaj zgłoszenie</button>
+                <button type="submit" class="btn btn-primary">Add service request</button>
             </div>
         </div>
     </form>
