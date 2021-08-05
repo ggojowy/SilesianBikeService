@@ -22,6 +22,7 @@
                 <th>Customer name</th>
                 <th>Customer surname</th>
                 <th>Customer service request</th>
+                <th>Service date</th>
             </tr>
             </thead>
 
@@ -30,6 +31,7 @@
                 <td th:text="${zgloszenie.imieKlienta}">Imię klienta</td>
                 <td th:text="${zgloszenie.nazwiskoKlienta}">Nazwisko klienta</td>
                 <td th:text="${zgloszenie.trescZgloszenia}">Treść zgłoszenia</td>
+                <td th:text="${zgloszenie.dataZgloszenia}">Data zgłoszenia</td>
             </tr>
             </tbody>
         </table>

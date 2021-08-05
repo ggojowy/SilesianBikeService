@@ -1,6 +1,7 @@
 package pl.edu.wszib.jwd.silesianbikeservice.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "zgloszenia")
@@ -18,14 +19,32 @@ public class Zgloszenie {
     @Column(nullable = false, length = 10000)
     private String trescZgloszenia;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Date dataZgloszenia;
+
+    @PrePersist
+    private void onCreate() {
+        dataZgloszenia = new Date();
+    }
+
     public Zgloszenie() {
     }
 
-    public Zgloszenie(Long id, String imieKlienta, String nazwiskoKlienta, String trescZgloszenia) {
+    public Zgloszenie(Long id, String imieKlienta, String nazwiskoKlienta, String trescZgloszenia,Date dataZgloszenia) {
         this.id = id;
         this.imieKlienta = imieKlienta;
         this.nazwiskoKlienta = nazwiskoKlienta;
         this.trescZgloszenia = trescZgloszenia;
+        this.dataZgloszenia = dataZgloszenia;
+    }
+
+    public Date getDataZgloszenia() {
+        return dataZgloszenia;
+    }
+
+    public void setDataZgloszenia(Date dataZgloszenia) {
+        this.dataZgloszenia = dataZgloszenia;
     }
 
     public Long getId() {
