@@ -23,6 +23,9 @@ public class Zgloszenie {
     @Column(nullable = false)
     private Date dataZgloszenia;
 
+    @Column(nullable = true, length = 100)
+    private String statusZgloszenia;
+
     @PrePersist
     private void onCreate() {
         dataZgloszenia = new Date();
@@ -32,12 +35,21 @@ public class Zgloszenie {
     public Zgloszenie() {
     }
 
-    public Zgloszenie(Long id, String imieKlienta, String nazwiskoKlienta, String trescZgloszenia,Date dataZgloszenia) {
+    public Zgloszenie(Long id, String imieKlienta, String nazwiskoKlienta, String trescZgloszenia,Date dataZgloszenia, String statusZgloszenia) {
         this.id = id;
         this.imieKlienta = imieKlienta;
         this.nazwiskoKlienta = nazwiskoKlienta;
         this.trescZgloszenia = trescZgloszenia;
         this.dataZgloszenia = dataZgloszenia;
+        this.statusZgloszenia = statusZgloszenia;
+    }
+
+    public String getStatusZgloszenia() {
+        return statusZgloszenia;
+    }
+
+    public void setStatusZgloszenia(String statusZgloszenia) {
+        this.statusZgloszenia = statusZgloszenia;
     }
 
     public Date getDataZgloszenia() {
@@ -78,5 +90,16 @@ public class Zgloszenie {
 
     public void setTrescZgloszenia(String trescZgloszenia) {
         this.trescZgloszenia = trescZgloszenia;
+    }
+
+    @Override
+    public String toString() {
+        return "Zgloszenie{" +
+                "id=" + id +
+                ", imieKlienta='" + imieKlienta + '\'' +
+                ", nazwiskoKlienta='" + nazwiskoKlienta + '\'' +
+                ", trescZgloszenia='" + trescZgloszenia + '\'' +
+                ", statusZgloszenia='" + statusZgloszenia + '\'' +
+                '}';
     }
 }

@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Nowe zgłoszenie</title>
+    <title>aktualizuj zgłoszenie</title>
 
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-
 <div class="container text-center">
     <div>
-        <h1>New service request</h1>
+        <h1>Change service request</h1>
     </div>
-    <form th:action="@{/dodaj_zgloszenie}" th:object="${zgloszenie}" method="post"
+    <form th:action="@{/aktualizuj_zgloszenie}" th:object="${zgloszenie2}" method="post"
           style="max-width: 600px; margin: 0 auto;">
         <div class="m-3">
-
+            <div class="form-group row">
+                <label class="col-form-label col-4">ID</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{id}" readonly=""
+                           minlength="2" maxlength="25">
+                </div>
+            </div>
             <div class="form-group row">
                 <label class="col-form-label col-4">Customer name</label>
                 <div class="col-8">
@@ -39,11 +43,16 @@
                            minlength="2" maxlength="10000">
                 </div>
             </div>
-
-
+            <div class="form-group row">
+                <label class="col-form-label col-4">Service Status</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{statusZgloszenia}" required
+                           minlength="2" maxlength="10000">
+                </div>
+            </div>
 
             <div>
-                <button type="submit" class="btn btn-primary">Add service request</button>
+                <button type="submit" class="btn btn-primary">Change</button>
             </div>
         </div>
     </form>
