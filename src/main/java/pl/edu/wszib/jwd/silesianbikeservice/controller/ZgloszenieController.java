@@ -19,6 +19,7 @@ public class ZgloszenieController {
     ZgloszenieDao zgloszenieDao;
 
     Zgloszenie zgloszenieX = new Zgloszenie();
+
     @GetMapping("/wszystkie_zgloszenia")
     public String viewAllZgloszenia(Model model) {
         List<Zgloszenie> zglosze = zgloszenieDao.findAll();
@@ -61,4 +62,6 @@ public class ZgloszenieController {
         model.addAttribute("zgloszenie2",zgloszenieX);
         return "edycja_zgloszenia";
     }
+
+
 }
