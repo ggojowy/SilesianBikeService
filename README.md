@@ -15,5 +15,8 @@ Projektem zaliczeniowym będzie aplikacja, która posłuży do obsługi serwisu 
  - Maven
  
  #Logika biznesowa
- Po rejestracji serwisanta i zalogowaniu mamy do dyspozycji panel serwisanta, który pozwala na dodawanie nowych zgłoszeń serwisowych oraz na przeglądanie wcześniej dodanych zgłoszeń serwisowych
+ Po rejestracji serwisanta i zalogowaniu mamy do dyspozycji panel serwisanta, który pozwala na dodawanie nowych zgłoszeń serwisowych oraz na przeglądanie wcześniej dodanych zgłoszeń serwisowych z możliwością edycji wcześniej zapisanych informacji oraz statusu.
+  
+  #Link do aplikacji
+  http://silesianbikeservice.herokuapp.com/
  
